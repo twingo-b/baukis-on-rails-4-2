@@ -49,3 +49,22 @@ Baukis は企業向けの顧客管理システム（Ruby on Rails 学習用サ�
   * http://baukis.example.com:3000 -- 職員向けサイト
   * http://baukis.example.com:3000/admin -- 管理者向けサイト
   * http://example.com:3000/mypage -- 顧客向けサイト
+
+----
+
+# docker-composeを利用した開発環境
+## 前提条件
+- Docker for Mac を利用しています
+```bash
+$ docker --version
+Docker version 1.12.0-rc2, build 906eacd, experimental
+
+$ docker-compose --version
+docker-compose version 1.8.0-rc1, build 9bf6bc6
+```
+
+## 起動
+```bash
+$ docker-compose build
+$ docker-compose up -d
+```

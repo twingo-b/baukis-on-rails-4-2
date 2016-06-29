@@ -21,6 +21,17 @@ gem 'date_validator', '~> 0.7.0'
 gem 'email_validator', '~> 1.4.0'
 gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'quiet_assets', '~> 1.0.2', group: :development
+group :development, :test do
+  # http://ruby-rails.hatenadiary.com/entry/20141024/1414081224#pry-install
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+
+  # https://blog.dakatsuka.jp/2011/05/14/hirb-rails-console.html
+  gem 'hirb'
+  gem 'hirb-unicode'
+end
 group :test do
   gem 'rspec-rails', '~> 3.4.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
