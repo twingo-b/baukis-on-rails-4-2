@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+  password: password
+  host: mysql
+
+development:
+  <<: *default
+  database: baukis_development
+
+test:
+  <<: *default
+  database: baukis_test
+
+production:
+  <<: *default
+  database: baukis_production
+  username: app
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
