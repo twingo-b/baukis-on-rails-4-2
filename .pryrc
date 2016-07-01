@@ -23,5 +23,11 @@ if defined? Hirb
   end
 
   Hirb.enable
+
+  # http://qiita.com/hyone/items/93ea5409e62725c96d87
+  extend Hirb::Console
+  def vtable(record, options = {}, *args)
+     table record, { vertical: true }.merge(options), *args
+  end
 end
 
